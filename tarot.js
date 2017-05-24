@@ -25,13 +25,23 @@ var tarotDeck = [
   { name: 'Strength',
     score: 8},
   { name: 'Hermit',
-    score: 9},
+    score: 9,
+    explanation: "An old man carrying a staff in one hand and a lit lantern" +
+    " containing a six-pointed star in the other. In the background is a wasteland." +
+    "The Hermit suggests the need to withdraw from society to become comfortable with oneself" +
+    " or possibly the need to return from isolation with the knowledge one has gained."
+  },
   { name: 'Wheel',
     score: 10},
   { name: 'Justice',
     score: 11},
   { name: 'Hanged Man',
-    score: 12},
+    score: 12,
+    explanation: "A young man is hanging by one ankle from a tree," +
+    " his face is serene and his head is surrounded by a nimbus." +
+    "His calm demeanor suggests that he has chosen this fate, " +
+    "and is calmly awaiting the outcome of his sacrifice."
+  },
   { name: 'Death',
     score: 13},
   { name: 'Temperance',
@@ -41,7 +51,13 @@ var tarotDeck = [
   { name: 'Tower',
     score: 16},
   { name: 'Star',
-    score: 17},
+    score: 17,
+    explanation:"A young woman is kneeling before a body of water," +
+    " she holds two vessels, and pours each of them out, one onto land," +
+    " the other into the water. A large star shines above her head in a field" +
+    " of smaller ones. It appears that she has great resources at her disposal," +
+    " although she may not be aware of them."
+  },
   { name: 'Moon',
     score: 18},
   { name: 'Sun',
@@ -52,9 +68,29 @@ var tarotDeck = [
     score: 21},
   //there will be a total of 22 possible picks
 ];
-/*The plan is to write a function that will select three cards at random
-out of the 22 major trumps, then print each card name and a short explanation.
-maybe I need to create a new blank array and fill it with each card pick? */
+/*The plan for this version is to write a function that will select three cards at random
+* out of the 22 major trumps, then print each card name and a short explanation.
+*/
+function drawThree(tarotDeck) {
+  //created an empty array to hold the random picks
+  var userPick = [];
+ 
+  //this part will push each pullCard to array userPick
+  while(userPick.length < 3){
+     //this var will select a random card object
+  var pullCard = tarotDeck[Math.floor(Math.random() * tarotDeck.length)];
+  userPick.push(pullCard);
+  }
+  // this bit will console log the resulting items
+  // once the userPick array is full
+  if (userPick.length == 3) {
+    console.log(userPick);
+  }
+
+}
+/*
+*commented out for safety
+*
 var userPicked[];
 function drawThree(tarotDeck) {
   var userPicked.floor(Math.random() * 22);
@@ -67,3 +103,5 @@ function drawThree(tarotDeck) {
     while(userPicked[i]
     } 
   }
+  *
+  */
