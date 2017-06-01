@@ -44,8 +44,12 @@
 
 <body>
 <div id="mainContent">
-<p id="helloText">Which cards will you pick?</p>
-<button id="clickButton" class="buttonStyle">click me</button>
+	<form action="/submit name info">
+		<input type="text" placeholder="What is your name?">
+        <button type="submit">Submit</button>	
+	</form>
+    <p id="helloText">Which cards will you pick?</p>
+        <button id="clickButton" class="buttonStyle">click me</button>
 </div>
 <script> 
 var myButton = document.getElementById("clickButton");
