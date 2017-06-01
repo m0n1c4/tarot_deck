@@ -44,15 +44,15 @@
 
 <body>
 <div id="mainContent">
-	<form action="/submit name info">
-		<input type="text" placeholder="What is your name?">
-        <button type="submit">Submit</button>	
+	<form action="/submit name info"> <!--- placeholder form action, needs to be changed --->
+		<input type="text" placeholder="What is your name?"> <!--- for user name submission, to be used later --->
+        <button type="submit">Do not press</button>	<!--- Clicking this button will break the page, return 404 --->
 	</form>
     <p id="helloText">Which cards will you pick?</p>
-        <button id="clickButton" class="buttonStyle">click me</button>
+        <button id="shuffleButton" class="buttonStyle">click me</button>
 </div>
 <script> 
-var myButton = document.getElementById("clickButton");
+var myButton = document.getElementById("shuffleButton");
 var myText = document.getElementById("helloText");
 
 myButton.addEventListener('click', doSomething, false)
